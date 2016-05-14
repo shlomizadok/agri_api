@@ -4,7 +4,6 @@ class CreateSales < ActiveRecord::Migration[5.0]
       t.datetime :start_at
       t.boolean :organic
       t.boolean :active
-      t.string :address
       t.references :user, foreign_key: true
 
       t.timestamps

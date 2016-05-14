@@ -10,4 +10,8 @@ class Sale < ApplicationRecord
   def region_name
     region.name
   end
+
+  def vegetables
+    veg_list.to_s
+  end
 end

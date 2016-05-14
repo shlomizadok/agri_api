@@ -14,4 +14,10 @@ class V1::UsersController < ApplicationController
     @user = current_v1_user
     render json: @user, serializer: V1::UserSerializer, root: nil
   end
+
+  def can
+    sale = Sale.find(params[:sale_id])
+    render json: sale && sale.user_id == current_v1_user.id
+
+  end
 end
