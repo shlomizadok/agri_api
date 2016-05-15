@@ -3,6 +3,10 @@ class Sale < ApplicationRecord
   belongs_to :user
   has_one :profile, through: :user
 
+  scope :active, -> { where(active: true) }
+  scope :active_and_now, -> { active.where('start_at <= ?', Time.now) }
+  scope :active_and_future, -> { active.where('start_at > ?', Time.now) }
+
   def region
     profile.region
   end

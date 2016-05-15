@@ -4,8 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :validatable
 
-  acts_as_tagger
-
   has_many :sales
   has_one :profile
 
