@@ -110,6 +110,7 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
+    pg (0.18.4)
     puma (3.4.0)
     rack (2.0.0.rc1)
       json
@@ -180,6 +181,7 @@ DEPENDENCIES
   devise
   listen (~> 3.0.5)
   omniauth-facebook
+  pg
   puma (~> 3.0)
   rack-cors
   rails (>= 5.0.0.rc1, < 5.1)
