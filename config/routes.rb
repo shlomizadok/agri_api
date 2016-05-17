@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :v1, defaults: { format: :json } do
     resource :login, only: [:create], controller: :sessions
+    post 'facebook', to: 'sessions#facebook'
     resources :sales do
       collection do
         get 'me'

@@ -9,6 +9,16 @@ class User < ApplicationRecord
 
   after_create :update_access_token!
 
+  def self.from_facebook(auth)
+    if user = find_by_email(auth['email'])
+      user
+    else
+      user = new(email: auth['email'], password: Devise.friendly_token[0, 20])
+      user.save!
+      user
+    end
+  end
+
   private
 
   def update_access_token!
