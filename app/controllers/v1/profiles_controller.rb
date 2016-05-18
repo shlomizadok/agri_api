@@ -1,6 +1,7 @@
 class V1::ProfilesController < ApplicationController
   def create
     @profile = Profile.new(profile_params)
+    profile.public = false
     @profile.user_id = current_v1_user.id
     if @profile.save
       render json: @profile

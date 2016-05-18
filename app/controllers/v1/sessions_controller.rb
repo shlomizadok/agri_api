@@ -15,7 +15,6 @@ class V1::SessionsController < ApplicationController
   end
 
   def facebook
-    puts params[:user][:auth_token]
     token = params[:user][:auth_token]
     @user = User.from_facebook(get_facebook_user(token))
     return head 401 unless @user

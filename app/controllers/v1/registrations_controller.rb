@@ -12,12 +12,10 @@ class V1::RegistrationsController < Devise::RegistrationsController
         render json: resource
       else
         expire_data_after_sign_in!
-        render json: resource
+        head 422
       end
     else
-      clean_up_passwords resource
-      set_minimum_password_length
-      render json: resource
+      head 422
     end
   end
 
