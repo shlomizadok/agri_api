@@ -6,4 +6,9 @@ class Profile < ApplicationRecord
   def region_name
     region.name
   end
+
+
+  def full_address
+    "#{address}, #{settlement}, ישראל"
+  end
 end
