@@ -1,4 +1,10 @@
 class V1::ProfilesController < ApplicationController
+  skip_before_action :authenticate_user_from_token!, only: [:index]
+  def index
+    @profiles = Profile.all
+    render json: @profiles, each_serializer: V1::ProfileSerializer
+  end
+
   def create
     @profile = Profile.new(profile_params)
     profile.public = false

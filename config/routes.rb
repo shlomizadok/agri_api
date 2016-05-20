@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :regions, only: [:index, :show]
     get 'me', to: 'users#me'
     post 'me/can', to: 'users#can'
-    resources :profiles, only: [:create, :update]
+    resources :profiles, only: [:create, :update, :index]
     resources :vegs, only: [:index]
   end
 end
