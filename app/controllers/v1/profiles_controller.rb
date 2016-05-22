@@ -2,7 +2,7 @@ class V1::ProfilesController < ApplicationController
   skip_before_action :authenticate_user_from_token!, only: [:index, :show]
   def index
     @profiles = Profile.published
-    render json: @profiles, each_serializer: V1::ProfileSerializer
+    render json: @profiles, each_serializer: V1::ProfileSerializer, include:  ['sales']
   end
 
   def show
