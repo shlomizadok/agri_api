@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      חפש: <input ng-model="query">
+      <br />
+      סינון לפי:
+      <select ng-model="orderProp">
+        <option value="name">אלפביתי</option>
+        <option value="public">לא מפורסם</option>
+      </select>
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="phones">
+        <li ng-repeat="profile in profiles | filter:query | orderBy:orderProp"
+            class="thumbnail">
+          <a href="#/profiles/{{profile.id}}">{{profile.name}}</a>
+          <p>{{profile.full_address}}</p>
+          <p>{{profile.phone}}</p>
+          <p>לפרסם את המשק? <input type="checkbox" ng-model="profile.public" ng-change="publish(profile)" /></p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>

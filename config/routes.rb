@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admin_users
   namespace :v1, defaults: { format: :json } do
     resource :login, only: [:create], controller: :sessions
     post 'facebook', to: 'sessions#facebook'
@@ -14,5 +15,10 @@ Rails.application.routes.draw do
     post 'me/can', to: 'users#can'
     resources :profiles
     resources :vegs, only: [:index]
+  end
+
+  namespace :admin do
+    resource :login, only: [:create], controller: :sessions
+    resources :profiles
   end
 end
