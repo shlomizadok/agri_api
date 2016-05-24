@@ -6,4 +6,8 @@ class V1::SaleSerializer < ActiveModel::Serializer
   def start_time
     object.start_at.strftime('%d-%m-%Y')
   end
+
+  class ProfileSerializer < ActiveModel::Serializer
+    attributes :id, :name, :address, :settlement, :about, :region_name, :phone, :region_id, :public, :full_address
+  end
 end
