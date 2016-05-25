@@ -10,16 +10,16 @@ class Admin::ProfilesController < AdminController
     render json: @profile, serializer: V1::ProfileSerializer
   end
 
-  # def create
-  #   @profile = Profile.new(profile_params)
-  #   profile.public = false
-  #   @profile.user_id = current_v1_user.id
-  #   if @profile.save
-  #     render json: @profile
-  #   else
-  #     return head 422
-  #   end
-  # end
+  def create
+    @profile = Profile.new(profile_params)
+    profile.public = true
+    @profile.user_id = current_v1_user.id
+    if @profile.save
+      render json: @profile
+    else
+      return head 422
+    end
+  end
 
   def update
     @profile = Profile.find(params[:id])
