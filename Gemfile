@@ -32,3 +32,7 @@ gem 'omniauth-facebook'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
 gem 'acts-as-taggable-on', github: 'shlomizadok/acts-as-taggable-on', branch: 'belongs_to_optional_for_tagger'
+
+# Caching
+gem 'dalli'
+gem 'connection_pool'

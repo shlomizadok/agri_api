@@ -60,6 +60,8 @@ GEM
     builder (3.2.2)
     byebug (8.2.5)
     concurrent-ruby (1.0.2)
+    connection_pool (2.2.0)
+    dalli (2.7.6)
     devise (4.1.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -178,6 +180,8 @@ DEPENDENCIES
   active_model_serializers!
   acts-as-taggable-on!
   byebug
+  connection_pool
+  dalli
   devise
   listen (~> 3.0.5)
   omniauth-facebook
