@@ -3,7 +3,7 @@ class V1::RegionsController < ApplicationController
 
   def index
     @regions = Region.all
-    render json: @regions
+    render json: @regions, each_serializer: V1::RegionSerializer
   end
 
   def show
