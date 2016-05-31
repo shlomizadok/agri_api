@@ -11,6 +11,6 @@ class Profile < ApplicationRecord
 
 
   def full_address
-    "#{settlement}, ישראל"
+    "#{address}, #{settlement}, ישראל"
   end
 end
