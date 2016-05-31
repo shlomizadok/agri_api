@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522041740) do
+ActiveRecord::Schema.define(version: 20160531104237) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(version: 20160522041740) do
     t.datetime "updated_at",                 null: false
     t.string   "phone"
     t.boolean  "public",     default: false
+    t.float    "latitude"
+    t.float    "longitude"
     t.index ["region_id"], name: "index_profiles_on_region_id"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end

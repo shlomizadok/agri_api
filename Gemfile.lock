@@ -72,6 +72,7 @@ GEM
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.10)
+    geocoder (1.2.13)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hashie (3.4.4)
@@ -183,6 +184,7 @@ DEPENDENCIES
   connection_pool
   dalli
   devise
+  geocoder
   listen (~> 3.0.5)
   omniauth-facebook
   pg

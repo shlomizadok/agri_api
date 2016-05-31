@@ -36,3 +36,7 @@ gem 'acts-as-taggable-on', github: 'shlomizadok/acts-as-taggable-on', branch: 'b
 # Caching
 gem 'dalli'
 gem 'connection_pool'
+
+# Geocoding
+gem 'geocoder'
+

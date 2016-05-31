@@ -8,6 +8,6 @@ class V1::SaleSerializer < ActiveModel::Serializer
   end
 
   class ProfileSerializer < ActiveModel::Serializer
-    attributes :id, :name, :address, :settlement, :about, :region_name, :phone, :region_id, :public, :full_address
+    attributes :id, :name, :address, :settlement, :about, :region_name, :phone, :region_id, :public, :full_address, :longitude, :latitude
   end
 end
