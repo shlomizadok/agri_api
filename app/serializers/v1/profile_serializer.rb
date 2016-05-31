@@ -1,4 +1,5 @@
 class V1::ProfileSerializer < ActiveModel::Serializer
+  cache key: 'profile', expires_in: 3.hours
   attributes :id, :name, :address, :settlement, :about, :region_name, :phone, :region_id, :public, :full_address
 
   has_many :sales
