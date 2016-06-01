@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Build Status](https://travis-ci.org/shlomizadok/agri_api.svg?branch=master)](https://travis-ci.org/shlomizadok/agri_api)
 
-Things you may want to cover:
+This project is the API project for מהחקלאי application. Github: [shlomizadok/agri](https://github.com/shlomizadok/agri)
 
-* Ruby version
+# Contribute
 
-* System dependencies
+Please help us make this API as awesome as it can get.
+You know the drill:
 
-* Configuration
+Fork, patch, pull request
 
-* Database creation
+# Develop locally
 
-* Database initialization
+This is a Rails 5 API project. (It requires ruby >= 2.2.4)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+After cloning locally, run:
+```bash
+bundle install
+rake db:create db:migrate db:seed
+```
