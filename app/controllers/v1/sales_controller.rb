@@ -14,6 +14,9 @@ class V1::SalesController < ApplicationController
   def create
     @sale = Sale.new(sale_params)
     @sale.user_id = current_v1_user.id
+    ## Workaround until issue resolved at clients
+    # Add 4 hours to start time
+    @sale.start_at = @sale.start_at + 4.hours
     if @sale.save
       render json: @sale, serializer: V1::SaleSerializer
     else
